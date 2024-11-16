@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kingdom's Railway Network</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-screen">
+            <img src="./pics/screens/title.png" alt="Kingdom's Railway Network" class="menu-title-image">
+            <form class="menu-form">
+                <div class="input-group">
+                    <input type="text" id="player-name" required class="name-input" placeholder="WHO ARE YOU?">
+                </div>
+                <div class="below-name">
+                    <div class="toggle-main">
+                        <h1 class="dificulty-heading">
+                            SET THE DIFFICULTY!
+                        </h1>
+                        <div class="buttons-level">
+
+
+                            <div class="dufficulty-btn">
+                                <button class="difficulty-toggle active" data-difficulty="easy">5 X 5</button>
+                                <span class="level">
+                                    EASY
+                                </span>
+                            </div>
+                            <div class="dufficulty-btn">
+                                <button class="difficulty-toggle inactive" data-difficulty="hard">7 X 7</button>
+                                <span class="level">
+                                    HARD
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons-menu">
+                        <button type="button" id="start-game" class="menu-button">Start Game</button>
+                        <button type="button" id="show-rules" class="menu-button2">Game Rules</button>
+                    </div>
+                </div>
+
+
+            </form>
+            <div class="menu-rail-container"></div>
+        </div>
+        <div class="game-screen">
+            <div class="game-content">
+                <div class="game-left">
+                    <img src="./pics/screens/title.png" alt="Kingdom's Railway Network" class="game-title-image">
+
+                    <div class="left-grid">
+                        <label class="player-name-game" for="player-display">ROUTE DESIGNER:</label>
+                        <span class="game-player-name" id="player-display"></span>
+                        <label for="timer" class="time-game">Elapsed TIME:</label>
+                        <span id="timer" class="timer-game">00:00</span>
+
+                        <button id="save-game">Save Game</button>
+                        <button id="reset-game">Reset Game</button>
+                        <button id="validate-solution">Check Solution</button>
+                    </div>
+
+                </div>
+                <div class="game-right">
+                    <div class="grid" id="game-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="rules-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Game Rules</h2>
+                <div id="rules-content">
+                </div>
+            </div>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Difficulty</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
